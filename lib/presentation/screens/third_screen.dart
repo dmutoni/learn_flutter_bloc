@@ -3,18 +3,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../logic/cubit/counter_cubit.dart';
 
-class SecondScreen extends StatefulWidget {
-  const SecondScreen({Key? key, required this.title, required this.color})
+class ThirdScreen extends StatefulWidget {
+  const ThirdScreen({Key? key, required this.title, required this.color})
       : super(key: key);
 
   final String title;
   final Color color;
 
   @override
-  State<SecondScreen> createState() => _SecondScreenState();
+  State<ThirdScreen> createState() => _ThirdScreenState();
 }
 
-class _SecondScreenState extends State<SecondScreen> {
+class _ThirdScreenState extends State<ThirdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,12 +73,6 @@ class _SecondScreenState extends State<SecondScreen> {
             const SizedBox(
               height: 24,
             ),
-            MaterialButton(
-                color: Colors.blue,
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/third');
-                },
-                child: const Text('Navigate to third')),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
